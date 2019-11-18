@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,12 +43,10 @@ public class ListController {
 	}
 
 
-
 	@GetMapping(value="/test")
 	public List<Item> getTest() {
 		return list;
 	}
-	
 	
 	
 	@PostMapping("/saveList")
@@ -55,22 +54,23 @@ public class ListController {
 			lr.save(list);	
 	}
 	
-	@PostMapping("/deleteList")
+	@DeleteMapping("/deleteList")
 	public void delete(@RequestBody GroceryList list) {
 			lr.delete(list);	
 	}
 	
-	@PostMapping("/deleteItem")
-	public void deleteItem(@RequestBody GroceryList list) {
-			lr.delete(list);	
+	@PostMapping("/grocerylists/additems/{itemId}") 
+	public void addListItem(@RequestBody GroceryList list) {
+			lr.save(list);	
 	}
+	
 	
 	@GetMapping("/listAll")
 	public Iterable<GroceryList> getAll(){
 		return lr.findAll();
 	}
 	
-	@PostMapping("/grocerylists/items/{itemId}") 
+	@DeleteMapping("/grocerylists/items/{itemId}") 
 	public void deleteListItem(@RequestBody GroceryList list) {
 			lr.delete(list);	
 	}
