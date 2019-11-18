@@ -1,0 +1,19 @@
+
+spring.application.name=grocery-service
+
+server.port=0
+#server.port 9001 used for development purposes
+#change port to 0 when service can be linked to Zuul
+spring.jpa.database=POSTGRESQL
+spring.datasource.platform=postgres
+spring.datasource.url=${JDBC_URL}?currentSchema=interview_service
+spring.datasource.username=${JDBC_USERNAME}
+spring.datasource.password=${JDBC_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.show-sql=false
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+
+#Make both of these true when linking with eureka server
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true

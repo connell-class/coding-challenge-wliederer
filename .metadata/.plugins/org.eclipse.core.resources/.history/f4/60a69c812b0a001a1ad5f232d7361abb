@@ -1,0 +1,15 @@
+
+spring.application.name=grocery-service
+
+server.port=0
+
+spring.jpa.database=POSTGRESQL
+spring.datasource.platform=postgres
+spring.datasource.url=jdbc:postgresql://postgresql-wl.cyz3cbj6ebr6.us-east-2.rds.amazonaws.com:5432/grocery
+spring.datasource.username=jdbc_user
+spring.datasource.password=p4ssw0rd
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+

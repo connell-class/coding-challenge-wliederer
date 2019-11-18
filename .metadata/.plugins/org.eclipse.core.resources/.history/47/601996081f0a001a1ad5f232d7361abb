@@ -1,0 +1,5 @@
+package com.groceryservice.model;
+
+public class GroceryList {
+
+}
