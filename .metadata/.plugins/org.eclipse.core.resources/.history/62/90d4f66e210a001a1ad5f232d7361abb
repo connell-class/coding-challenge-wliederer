@@ -1,0 +1,5 @@
+package com.groceryservice.repo;
+
+public interface ListRepository {
+
+}
