@@ -1,8 +1,4 @@
-create table items (
-id integer,
-itemtype text,
-description text
-);
+
 
 
 

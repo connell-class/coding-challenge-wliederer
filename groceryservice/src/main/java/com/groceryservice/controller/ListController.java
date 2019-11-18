@@ -1,6 +1,6 @@
 package com.groceryservice.controller;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +29,20 @@ public class ListController {
 	@Autowired
 	private ListRepository lr;
 	
+	
+	
+	public ListRepository getLr() {
+		return lr;
+	}
+
+
+	@Autowired
+	public void setLr(ListRepository lr) {
+		this.lr = lr;
+	}
+
+
+
 	@GetMapping(value="/test")
 	public List<Item> getTest() {
 		return list;

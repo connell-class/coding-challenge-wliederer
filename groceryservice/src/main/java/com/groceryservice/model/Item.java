@@ -23,8 +23,8 @@ public class Item {
 	@Column(name="type")
 	private String type;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinColumn(name="item_description")
+	
+	@Column(name="item_description")
 	private String description;
 
 	public int getId() {

@@ -28,7 +28,7 @@ public class GroceryList {
 	
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinTable(name="grovery_items")
+	@JoinTable(name="grocery_items")
 	private List<Item> items = new ArrayList<Item>();
 
 
